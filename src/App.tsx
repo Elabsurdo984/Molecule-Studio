@@ -15,6 +15,15 @@ function App() {
       <SearchBar onSearch={setMoleculeName} />
       <main className="mt-4">
         <MoleculeViewer moleculeName={moleculeName} />
+
+        <div className="instructions-card mt-4">
+          <h4>Controles</h4>
+          <ul>
+            <li><b>Rotar:</b> Clic izquierdo + Arrastrar</li>
+            <li><b>Zoom:</b> Rueda del ratón</li>
+            <li><b>Mover:</b> Clic derecho + Arrastrar</li>
+          </ul>
+        </div>
       </main>
     </div>
   );

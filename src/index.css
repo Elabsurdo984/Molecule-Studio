@@ -1,1 +1,108 @@
-/* We will keep this file for any future global styles, but for now, it's empty. */
+/* --- Chemistry Lab Theme --- */
+
+:root {
+  --background-dark: #1a1a2e;
+  --primary-accent: #00a8ff;
+  --primary-accent-darker: #007abf;
+  --text-light: #f0f0f0;
+  --border-color: #3a3a5e;
+  --input-bg: #2a2a4e;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --- Header --- */
+header h1 {
+  color: var(--primary-accent);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 168, 255, 0.5);
+}
+
+header .lead {
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+/* --- Search Bar & Form Elements --- */
+.form-control {
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+  border-radius: 6px;
+  padding: 10px 15px;
+  height: 50px; /* Taller input */
+}
+
+.form-control:focus {
+  background-color: var(--input-bg);
+  color: var(--text-light);
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 0.25rem rgba(0, 168, 255, 0.25);
+}
+
+.form-control::placeholder {
+  color: var(--text-light);
+  opacity: 0.5;
+}
+
+/* --- Hexagonal Button --- */
+.btn-primary {
+  background-color: var(--primary-accent);
+  border: none;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  transition: background-color 0.2s ease-in-out;
+  width: 120px; /* Fixed width for hexagon shape */
+  height: 50px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-accent-darker);
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.25rem rgba(0, 168, 255, 0.25);
+}
+
+/* --- Molecule Viewer --- */
+.molecule-viewer-container {
+  width: 100%;
+  height: 500px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%);
+}
+
+/* --- Instructions Card --- */
+.instructions-card {
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.instructions-card h4 {
+  color: var(--primary-accent);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.instructions-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.instructions-card ul li {
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+/* Override Bootstrap container for a wider view */
+.container {
+  max-width: 960px;
+}

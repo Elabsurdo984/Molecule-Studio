@@ -1,22 +1,23 @@
 # Molecule-Studio
 
-Molecule-Studio is a web-based 3D molecule visualizer built with React and Three.js. It allows users to search for molecules and view their structures in an interactive 3D environment.
+Molecule-Studio is a web-based 3D molecule visualizer built with React and Three.js. It allows users to search for molecules and view their structures in an interactive 3D environment, presented with a chemistry-themed "dark lab" interface.
 
-![Molecule Studio Screenshot](public/general-icon.png)
+![Molecule Studio Screenshot](public/general-icon.png) 
 
 ## Features
 
+- **Themed Interface:** A custom "dark lab" theme with hexagonal UI elements inspired by chemical structures.
 - **3D Molecule Rendering:** View molecular structures rendered in a 3D space.
-- **Interactive Controls:** Rotate, pan, and zoom the view using OrbitControls.
-- **Search Functionality:** Load different molecules by name (e.g., `water`, `caffeine`, `methane`).
 - **CPK Coloring:** Atoms are colored according to the standard CPK (Corey-Pauling-Koltun) convention for easy identification.
+- **Interactive Controls:** Rotate, pan, and zoom the view using OrbitControls. On-screen instructions are provided.
+- **Search Functionality:** Load different molecules by name (e.g., `water`, `caffeine`, `methane`).
 
 ## Tech Stack
 
 - **Framework:** React (with TypeScript)
 - **Build Tool:** Vite
 - **3D Rendering:** `three.js`
-- **Styling:** Bootstrap
+- **Styling:** Bootstrap (for layout) & a custom global stylesheet for theming.
 
 ## Getting Started
 

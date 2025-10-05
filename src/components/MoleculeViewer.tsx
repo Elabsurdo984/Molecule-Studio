@@ -149,7 +149,7 @@ const MoleculeViewer: React.FC<MoleculeViewerProps> = ({ moleculeName }) => {
 
   }, [moleculeName]);
 
-  return <div ref={mountRef} style={{ width: '100%', height: '500px', border: '1px solid #ccc', borderRadius: '4px' }} />;
+  return <div ref={mountRef} className="molecule-viewer-container" />;
 };
 
 export default MoleculeViewer;

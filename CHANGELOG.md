@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0] - 2025-10-05
+
+### Added
+- Implemented a chemistry-themed "dark lab" visual style across the application.
+- Styled the search button as a hexagon to evoke chemical structures.
+- Added an instructions card below the viewer to explain camera controls (rotate, zoom, pan).
+
+### Changed
+- Centralized all styling into `src/index.css` for better maintainability.
+- Refactored the `MoleculeViewer` component to remove inline styles in favor of a global CSS class.
+
 ## [0.2.0] - 2025-10-05
 
 ### Added
