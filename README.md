@@ -2,7 +2,7 @@
 
 Molecule-Studio is a web-based 3D molecule visualizer built with React and Three.js. It allows users to search for molecules and view their structures in an interactive 3D environment.
 
-![Molecule Studio Screenshot](public/molecule-icon.png)
+![Molecule Studio Screenshot](public/general-icon.png)
 
 ## Features
 
