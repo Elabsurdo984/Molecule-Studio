@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0] - 2025-10-05
+
+### Added
+- An information panel to display details about the current molecule.
+- The panel shows the molecule's name, its calculated molecular formula, and a color legend for the elements.
+- Created a new `InfoPanel.tsx` component to encapsulate this functionality.
+- Added a `src/utils/colors.ts` module to share the atom color map across components.
+
+### Changed
+- Updated the main layout in `App.tsx` to a two-column grid to include the new info panel.
+- Refactored `MoleculeViewer.tsx` to calculate the molecular formula and lift the state to the parent `App` component.
+
 ## [0.3.0] - 2025-10-05
 
 ### Added

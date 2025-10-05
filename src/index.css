@@ -102,6 +102,39 @@ header .lead {
   opacity: 0.9;
 }
 
+/* --- Info Panel --- */
+.info-panel {
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  height: 100%;
+}
+
+.info-panel h3 {
+  color: var(--primary-accent);
+  font-weight: 600;
+}
+
+.formula-display {
+  font-size: 1.2rem;
+  background-color: var(--background-dark);
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.legend-list {
+  margin-top: 20px;
+}
+
+.legend-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+}
+
+
 /* Override Bootstrap container for a wider view */
 .container {
   max-width: 960px;

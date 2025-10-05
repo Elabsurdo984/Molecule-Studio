@@ -7,10 +7,11 @@ Molecule-Studio is a web-based 3D molecule visualizer built with React and Three
 ## Features
 
 - **Themed Interface:** A custom "dark lab" theme with hexagonal UI elements inspired by chemical structures.
+- **Molecular Details:** Displays the molecule's name, calculated molecular formula, and a color legend for its constituent elements.
 - **3D Molecule Rendering:** View molecular structures rendered in a 3D space.
 - **CPK Coloring:** Atoms are colored according to the standard CPK (Corey-Pauling-Koltun) convention for easy identification.
 - **Interactive Controls:** Rotate, pan, and zoom the view using OrbitControls. On-screen instructions are provided.
-- **Search Functionality:** Load different molecules by name (e.g., `water`, `caffeine`, `methane`).
+- **Search Functionality:** Load different molecules by name. Currently supported molecules are `water`, `caffeine`, `methane`, and `benzene`.
 
 ## Tech Stack
 
