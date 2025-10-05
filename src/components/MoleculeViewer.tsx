@@ -47,26 +47,39 @@ const MoleculeViewer: React.FC<MoleculeViewerProps> = ({ moleculeName }) => {
 
     const pdbLoader = new PDBLoader();
 
+    const atomColors: { [element: string]: THREE.Color } = {
+      'H': new THREE.Color(0xffffff),  // White
+      'C': new THREE.Color(0x808080),  // Gray
+      'N': new THREE.Color(0x0000ff),  // Blue
+      'O': new THREE.Color(0xff0000),  // Red
+      'F': new THREE.Color(0x00ff00),  // Green
+      'CL': new THREE.Color(0x00ff00), // Green
+      'BR': new THREE.Color(0xa52a2a), // Brown
+      'I': new THREE.Color(0x9400d3),  // Dark Violet
+      'P': new THREE.Color(0xffa500),  // Orange
+      'S': new THREE.Color(0xffff00),  // Yellow
+    };
+    const defaultAtomColor = new THREE.Color(0xffc0cb); // Pink as default
+
     pdbLoader.load(
       `/models/${moleculeName}.pdb`,
       (pdb) => {
         console.log(`Successfully loaded molecule: ${moleculeName}`);
-        const { geometryAtoms, geometryBonds } = pdb;
+        const { geometryAtoms, geometryBonds, json } = pdb;
 
         root.clear(); // Clear previous molecule
 
         // Draw atoms
         const atomPositions = geometryAtoms.getAttribute('position');
-        const colors = geometryAtoms.getAttribute('color');
-        const sphereMaterial = new THREE.MeshPhongMaterial();
 
         for (let i = 0; i < atomPositions.count; i++) {
             const position = new THREE.Vector3().fromBufferAttribute(atomPositions, i);
-            const color = new THREE.Color().fromBufferAttribute(colors, i);
+            const element = json.atoms[i][4].trim().toUpperCase();
+            const color = atomColors[element] || defaultAtomColor;
             
             const atom = new THREE.Mesh(
                 new THREE.SphereGeometry(0.4),
-                sphereMaterial.clone().setValues({ color })
+                new THREE.MeshPhongMaterial({ color })
             );
             atom.position.copy(position);
             root.add(atom);

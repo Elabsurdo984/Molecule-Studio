@@ -1,39 +1,60 @@
-# Molecule Studio
+# Molecule-Studio
 
-A simple 3D molecule viewer built with React, TypeScript, and Three.js. This application allows you to search for molecules and visualize their atomic structure in an interactive 3D space.
+Molecule-Studio is a web-based 3D molecule visualizer built with React and Three.js. It allows users to search for molecules and view their structures in an interactive 3D environment.
+
+![Molecule Studio Screenshot](public/molecule-icon.png)
 
 ## Features
 
-- **3D Visualization:** Renders molecules with atoms as spheres and bonds as cylinders.
-- **Interactive Controls:** Use your mouse to rotate, pan, and zoom the molecule model.
-- **Search:** Find molecules by name. Currently supported molecules:
-  - `water`
-  - `caffeine`
-  - `methane`
+- **3D Molecule Rendering:** View molecular structures rendered in a 3D space.
+- **Interactive Controls:** Rotate, pan, and zoom the view using OrbitControls.
+- **Search Functionality:** Load different molecules by name (e.g., `water`, `caffeine`, `methane`).
+- **CPK Coloring:** Atoms are colored according to the standard CPK (Corey-Pauling-Koltun) convention for easy identification.
 
 ## Tech Stack
 
-- **Frontend:** React with TypeScript
+- **Framework:** React (with TypeScript)
 - **Build Tool:** Vite
-- **3D Graphics:** Three.js
-- **UI Styling:** Bootstrap
+- **3D Rendering:** `three.js`
+- **Styling:** Bootstrap
 
-## How to Run Locally
+## Getting Started
 
-1.  **Clone the repository:**
-    ```bash
-    git clone <repository-url>
-    cd molecule-studio
-    ```
+To get a local copy up and running, follow these simple steps.
 
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
+### Prerequisites
 
-3.  **Start the development server:**
-    ```bash
-    npm run dev
-    ```
-    The application will be available at `http://localhost:5173` (or the next available port).
-    
+- Node.js (v18 or later)
+- npm
+
+### Installation
+
+1. Clone the repo:
+   ```sh
+   git clone https://github.com/your_username/molecule-studio.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd molecule-studio
+   ```
+3. Install NPM packages:
+   ```sh
+   npm install
+   ```
+
+### Running the Application
+
+To run the app in development mode, execute:
+```sh
+npm run dev
+```
+Open [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal) to view it in the browser.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+- `npm run dev`: Runs the app in development mode.
+- `npm run build`: Builds the app for production.
+- `npm run lint`: Lints the codebase using ESLint.
+- `npm run preview`: Serves the production build locally for preview.
